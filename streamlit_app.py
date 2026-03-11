@@ -94,9 +94,7 @@ if menu == "Apply":
     travel_support = st.radio("Do you require travel support?", ["Yes", "No"])
 
 
-    submit = st.button("Submit Application")
-
-    if st.button("Submit"):
+    if st.button("Submit Application"):
 
         c.execute(
         "INSERT INTO applications VALUES (?,?,?,?,?,?,?)",
@@ -106,6 +104,8 @@ if menu == "Apply":
         conn.commit()
 
         st.success("Application submitted!")
+    else:
+        st.error("Please complete filling all the details.")
 
 # -------------------
 # ADMIN DASHBOARD
