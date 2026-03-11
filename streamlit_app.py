@@ -94,7 +94,7 @@ if menu == "Apply":
     travel_support = st.radio("Do you require travel support?", ["Yes", "No"])
 
 
-     if st.button("Submit Application"):
+    if st.button("Submit Application"):
 
         if first_name and last_name and email and university:
 
